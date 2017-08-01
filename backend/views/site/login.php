@@ -49,7 +49,7 @@ use yii\bootstrap\ActiveForm;
                                     <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
                                                             <?= $form->field($model, 'password')
-                                                                ->textInput([
+                                                                ->passwordInput([
                                                                     'class' => 'form-control',
                                                                     'placeholder' => '密码'
                                                                 ])
