@@ -15,9 +15,9 @@ $config = [
         //TODO 修改db配置
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=127.0.0.1;dbname=yiiadmins',
-            'username' => 'root',
-            'password' => 'root',
+            'dsn' => 'mysql:host=127.0.0.1;dbname=test',
+            'username' => 'test',
+            'password' => 'test',
             'charset' => 'utf8',
         ],
         'request' => [
@@ -46,15 +46,9 @@ $config = [
             'maxSourceLines'=>'20'
         ],
         'urlManager' => [
-            'enablePrettyUrl' => true,
+            'enablePrettyUrl' => false,
             'showScriptName' => false,
-            //'enableStrictParsing' => true,
-            'rules' => [
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
-            ],
+//            'enableStrictParsing' => false,
         ],
         'request' => [
             //TODO !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
