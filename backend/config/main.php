@@ -45,10 +45,15 @@ $config = [
             'errorAction' => 'site/error',
             'maxSourceLines'=>'20'
         ],
+        // 路由配置
         'urlManager' => [
-            'enablePrettyUrl' => false,
-            'showScriptName' => false,
-//            'enableStrictParsing' => false,
+            'enablePrettyUrl' => true,
+            'showScriptName'  => false,
+            'rules' => [
+                '<controller:\w+>/<id:\d+>'              => '<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>'          => '<controller>/<action>',
+            ],
         ],
         'request' => [
             //TODO !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
