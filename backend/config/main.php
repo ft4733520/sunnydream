@@ -46,9 +46,15 @@ $config = [
             'maxSourceLines'=>'20'
         ],
         'urlManager' => [
-            'enablePrettyUrl' => false,
+            'enablePrettyUrl' => true,
             'showScriptName' => false,
-//            'enableStrictParsing' => false,
+            //'enableStrictParsing' => true,
+            'rules' => [
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+            ],
         ],
         'request' => [
             //TODO !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
