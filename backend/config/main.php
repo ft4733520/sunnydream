@@ -13,13 +13,13 @@ $config = [
     'defaultRoute'=>'index',
     'components' => [
         //TODO 修改db配置
-        'db' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=127.0.0.1;dbname=test',
-            'username' => 'test',
-            'password' => 'test',
-            'charset' => 'utf8',
-        ],
+        // 'db' => [
+        //     'class' => 'yii\db\Connection',
+        //     'dsn' => 'mysql:host=127.0.0.1;dbname=test',
+        //     'username' => 'test',
+        //     'password' => 'test',
+        //     'charset' => 'utf8',
+        // ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
@@ -45,10 +45,17 @@ $config = [
             'errorAction' => 'site/error',
             'maxSourceLines'=>'20'
         ],
+        // 路由配置
         'urlManager' => [
-            'enablePrettyUrl' => false,
+            'enablePrettyUrl' => true,
             'showScriptName' => false,
-//            'enableStrictParsing' => false,
+            //'enableStrictParsing' => true,
+            'rules' => [
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+            ],
         ],
         'request' => [
             //TODO !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -69,7 +76,9 @@ if (!YII_ENV_TEST) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
+        'allowedIPs'=>array('127.0.0.1','::1','118.192.170.26'),
     ];
+
 }
 
 return $config;
