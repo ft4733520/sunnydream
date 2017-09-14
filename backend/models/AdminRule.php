@@ -20,7 +20,7 @@ class AdminRule extends BaseModel
 
     public static function tableName()
     {
-        return 'admin_rule';
+        return '{{%admin_rule}}';
     }
 
     public function scenarios()

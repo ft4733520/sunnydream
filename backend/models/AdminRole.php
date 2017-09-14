@@ -27,7 +27,7 @@ class AdminRole extends BaseModel
 
     public static function tableName()
     {
-        return 'admin_role';
+        return '{{%admin_role}}';
     }
 
     public function scenarios()

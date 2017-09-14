@@ -31,7 +31,7 @@ class BackendUser extends BaseModel implements IdentityInterface
      */
     public static function tableName()
     {
-        return '{{%user}}';
+        return '{{%admin_user}}';
     }
 
     /**
