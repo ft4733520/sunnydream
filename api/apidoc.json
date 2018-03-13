@@ -1,0 +1,15 @@
+{
+  "name": "企业保洁API接口文档",
+  "title": "企业保洁API接口文档",
+  "description":"前人栽树,后人乘凉",
+  "url" : "http://api.demo.com",
+  "version": "1.0.0",
+  "header": {
+    "title": "My own header title",
+    "filename": "header.md"
+  },
+  "footer": {
+    "title": "My own footer title",
+    "filename": "footer.md"
+  }
+}
