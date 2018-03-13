@@ -30,9 +30,5 @@ return [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ],
         ],
-        'session'=>[
-            'timeout'=>20,
-        ],
     ],
-    'language' =>'zh-CN',
 ];
