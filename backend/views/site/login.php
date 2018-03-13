@@ -17,8 +17,8 @@ use yii\bootstrap\ActiveForm;
                 <div class="center">
                     <h1>
                         <i class="ace-icon fa fa-leaf green"></i>
-                        <span class="red">YII</span>
-                        <span class="white" id="id-text2">ADMIN</span>
+                        <span class="red">NX.Proble</span>
+                        <span class="white" id="id-text2">宁夏</span>
                     </h1>
                 </div>
 
